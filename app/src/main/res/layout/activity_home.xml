@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#F8F9FB"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- Encabezado -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp">
+
+        <ImageView
+            android:src="@drawable/ic_notifications"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:tint="#8EB0C8" />
+
+        <TextView
+            android:text="Todas las tareas"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <ImageView
+            android:src="@drawable/ic_bell"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:tint="#8EB0C8" />
+    </LinearLayout>
+
+    <!-- Filtros de fecha -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Ejemplo de fechas -->
+            <Button
+                android:text="May 25\nSun"
+                android:textAlignment="center"
+                android:backgroundTint="#8EB0C8"
+                android:textColor="#FFF"
+                android:layout_marginEnd="8dp"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:text="May 26\nMon"
+                android:backgroundTint="#E0E0E0"
+                android:textColor="#000"
+                android:layout_marginEnd="8dp"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:text="May 27\nTue"
+                android:backgroundTint="#E0E0E0"
+                android:textColor="#000"
+                android:layout_marginEnd="8dp"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Filtros de tareas -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="All"
+            android:backgroundTint="#8EB0C8"
+            android:textColor="#FFF"
+            android:layout_marginEnd="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="To do"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#000"
+            android:layout_marginEnd="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="In Progress"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#000"
+            android:layout_marginEnd="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="Completed"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Lista de tareas -->
+    <ScrollView
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Tarjeta de tarea -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="#8FA9BC"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Grocery shopping app design"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Market Research"
+                    android:textColor="#444" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="⏰ 10:00 AM"
+                    android:textColor="#8EB0C8" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Barra inferior -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:elevation="6dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_calendar"
+            app:tint="#8EB0C8"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="30dp"/>
+
+        <ImageView
+            android:src="@drawable/ic_add"
+            app:tint="#FFF"
+            android:backgroundTint="#8EB0C8"
+            android:background="@drawable/fab_background"
+            android:padding="10dp"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="30dp"/>
+
+        <ImageView
+            android:src="@drawable/ic_user"
+            app:tint="#8EB0C8"
+            android:layout_width="28dp"
+            android:layout_height="28dp"/>
+    </LinearLayout>
+
+</LinearLayout>
